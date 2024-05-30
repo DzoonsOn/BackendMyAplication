@@ -3,7 +3,7 @@
 
 Utwórz nowy folder o nazwie backend.
 Otwórz w nim konsolę i wpisz następującą komendę, aby sklonować repozytorium:
-"git clone https://github.com/DzoonsOn/BackendMyAplication/"
+"git clone https://github.com/DzoonsOn/BackendMyAplication"
 
 2.Otwieranie projektu w edytorze:
 
