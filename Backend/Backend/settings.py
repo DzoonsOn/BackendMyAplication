@@ -150,3 +150,45 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # dodane
 AUTH_USER_MODEL = "user_app.User"
+
+AUTHENTICATION_BACKENDS = (
+    # needed to login by username in django admin, regardless of allauth
+    'django.contrib.auth.backends.ModelBackend',
+
+    # allauth specific autheticationmethods such as login by email
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_UNIQUE_USERNAME = False
+ACCOUNT_USERNAME_REQUIRED = False
+# ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+USERNAME_REQUIRED = False
+ACCOUNT_EMAIL_VERIFICATION = None
+ACCOUNT_CONFIRM_EMAIL_ON_GET = False
+
+REST_AUTH_SERIALIZERS = {
+    'LOGIN_SERIALIZER': 'user_app.serializers.NewLoginSerializer',
+    'USER_DETAILS_SERIALIZER': 'user_app.serializers.NewUserDetailsSerializer',
+}
+
+REST_AUTH = {
+#     'REGISTER_SERIALIZER': 'user_app.serializers.NewRegisterSerializer',
+    'SESSION_LOGIN': False
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
