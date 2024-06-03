@@ -55,8 +55,7 @@ http://localhost:8000/admin/ i zaloguj się danymi superużytkownika.
 
 IMPORTANT!!!!! Aby móc korzystać z pełnoprawnej aplikacji, najpierw musimy uruchomić serwer, doperio potem można zobaczyć efekty wizualne na frontencie(można pobierać front i backend równolegle).
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Postępuj zgodnie z powyższymi krokami, aby prawidłowo skonfigurować środowisko i uruchomić projekt. Jeśli masz jakiekolwiek pytania lub napotkasz problemy, poszukaj dodatkowych materiałów lub tutoriali online.
-
+Postępuj zgodnie z powyższymi krokami, aby prawidłowo skonfigurować środowisko i uruchomić projekt.
 
 
 
